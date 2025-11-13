@@ -1,0 +1,31 @@
+name: air-quality-daily
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 13 * * *'   # every day at 13:30 UTC
+
+jobs:
+  schedule_pipelines:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          cd notebooks/ch03
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Execute feature pipeline notebook
+        env:
+          HOPSWORKS_API_KEY: ${{ secrets.HOPSWORKS_API_KEY }}
+        run: |
+          cd notebooks/ch03
+          jupyter nbconvert --to notebook --execute lab1.2_air_quality_feature_pipeline.ipynb
