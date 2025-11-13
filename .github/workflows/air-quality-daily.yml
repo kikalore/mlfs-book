@@ -1,53 +1,54 @@
-# name: air-quality-daily
-# on:
-#   workflow_dispatch:
-#     #schedule:
-#     #- cron: '11 6 * * *'
+name: air-quality-daily
 
-# jobs:
-#   schedule_pipelines:
-#     runs-on: ubuntu-latest
+on:
+  workflow_dispatch:
+    schedule:
+    - cron: '11 6 * * *'
 
-#     permissions:
-#       pages: write
-#       contents: write
+jobs:
+  schedule_pipelines:
+    runs-on: ubuntu-latest
 
-#     steps:
-#       - name: checkout repo content
-#         uses: actions/checkout@v4
+    permissions:
+      pages: write
+      contents: write
 
-#       - name: setup python
-#         uses: actions/setup-python@v5
-#         with:
-#           python-version: '3.11'
-#           cache: 'pip'
-#       - name: install python packages
-#         run: |
-#           python -m pip install --upgrade pip
-#           pip install -r requirements.txt
+    steps:
+      - name: checkout repo content
+        uses: actions/checkout@v4
 
-#       - name: execute python workflows from bash script
-#         env:
-#           HOPSWORKS_API_KEY: ${{ secrets.HOPSWORKS_API_KEY }}
-#         run: |
-#           ipython notebooks/airquality/2_air_quality_feature_pipeline.ipynb
-#           ipython notebooks/airquality/4_air_quality_batch_inference.ipynb
-#       - name: github pages publish
-#         uses: stefanzweifel/git-auto-commit-action@v5
-#         with:
-#           commit_message: "Air Quality Dashboard published"
-#           commit_options: '--no-verify --signoff'
+      - name: setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: install python packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-#           file_pattern: 'docs/air-quality/assets/img/* docs/_includes/*'
+      - name: execute python workflows from bash script
+        env:
+          HOPSWORKS_API_KEY: ${{ secrets.HOPSWORKS_API_KEY }}
+        run: |
+          ipython notebooks/airquality/2_air_quality_feature_pipeline.ipynb
+          ipython notebooks/airquality/4_air_quality_batch_inference.ipynb
+      - name: github pages publish
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Air Quality Dashboard published"
+          commit_options: '--no-verify --signoff'
 
-#           repository: .
+          file_pattern: 'docs/air-quality/assets/img/* docs/_includes/*'
 
-#           status_options: '--untracked-files=no'
+          repository: .
 
-#           skip_dirty_check: true
+          status_options: '--untracked-files=no'
 
-#           skip_fetch: true
+          skip_dirty_check: true
 
-#           skip_checkout: true
+          skip_fetch: true
 
-#           push_options: '--force'
+          skip_checkout: true
+
+          push_options: '--force'
