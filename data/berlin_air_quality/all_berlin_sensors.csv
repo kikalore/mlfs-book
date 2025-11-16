@@ -1,0 +1,11 @@
+url, file_name, country, city, street
+"https://api.waqi.info/feed/@6132", "berlin.csv", "Germany", "Berlin", "noname"
+"https://api.waqi.info/feed/@10033", "buch.csv", "Germany", "Berlin", "buch"
+"https://api.waqi.info/feed/@10034", "friedrichshagen.csv", "Germany", "Berlin", "friedrichshagen"
+"https://api.waqi.info/feed/@13851", "karl-marx.csv", "Germany", "Berlin", "karl-marx-strasse"
+"https://api.waqi.info/feed/@13852", "leipziger.csv", "Germany", "Berlin", "leipziger-strasse"
+"https://api.waqi.info/feed/@10040", "mariendorf.csv", "Germany", "Berlin", "mariendorf--mariendorfer-damm"
+"https://api.waqi.info/feed/@10039", "mitte.csv", "Germany", "Berlin", "mitte--bruckenstrasse"
+"https://api.waqi.info/feed/@10032", "neukolln-nansen.csv", "Germany", "Berlin", "neukolln-nansenstrasse"
+"https://api.waqi.info/feed/@10036", "neukolln-silbersteinstr.csv", "Germany", "Berlin", "neukolln-silbersteinstrasse"
+"https://api.waqi.info/feed/@10030", "wedding.csv", "Germany", "Berlin", "wedding-amrumer-strasse"
