@@ -2,7 +2,7 @@
 
 ### Overview
 
-This project aims to predict daily air quality (specifically PM2.5 levels) for the city of Berlin. It leverages historical weather data and air quality readings from 10 different sensors located across the city of Berlin, that can be retrieved from https://waqi.info/.
+This project aims to predict daily air quality (specifically PM2.5 levels) for the city of Berlin. It leverages historical weather data and air quality readings from 10 different sensors located across the city of Berlin, which can be retrieved from https://waqi.info/.
 
 The system is designed as an end-to-end MLOps pipeline, which includes:
 
@@ -20,7 +20,7 @@ The system is designed as an end-to-end MLOps pipeline, which includes:
 
 * Data Sources:
 
-* Air Quality: AQICN API (waqi.info)
+* Air Quality: AQICN API (https://waqi.info/)
 
 * Weather: Open-Meteo API
 
