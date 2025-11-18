@@ -13,7 +13,9 @@ The system is designed as an end-to-end MLOps pipeline, which includes:
 * A training pipeline to create and update a predictive model.
 
 * A batch inference pipeline to generate daily forecasts.
-
+  
+### Folder organisation
+The files for grades A are the ones provided in the main folder, moreover we provided also the files for grade C and E in their respective folders, for completeness.
 ### Technology used
 
 * Feature Store: Hopsworks
