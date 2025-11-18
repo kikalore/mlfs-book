@@ -4,8 +4,7 @@
 
 {% include air-quality.html %}
 
-![Forecast]
-(./assets/img/pm25_forecast_buch.png)
+![Forecast](./assets/img/pm25_forecast_buch.png)
 (./assets/img/pm25_forecast_friedrichshagen.png)
 (./assets/img/pm25_forecast_karl-liebknecht-strasse.png)
 (./assets/img/pm25_forecast_karl-marx-strasse.png)
